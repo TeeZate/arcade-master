@@ -1,0 +1,137 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffebcc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background-color: #ffcc99;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #ff6600;
+  font-size: 2em;
+}
+
+.difficulty-selector {
+  margin: 10px 0;
+}
+
+select, button {
+  font-size: 1.2em;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #ff3300;
+}
+
+.towers {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tower {
+  width: 30px;
+  height: 250px;
+  background-color: #ff9900;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  margin: 0 70px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.disk {
+  height: 25px;
+  background-color: #ff3333;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.disk:hover {
+  opacity: 0.9;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #009900;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-top: 20px;
+  font-size: 1.5em;
+  padding: 10px;
+  background-color: #3399ff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Add these styles to your existing CSS */
+
+/* Highlighted Tower */
+.tower.selected {
+  background-color: #ffcc00; /* Brighter color for selected tower */
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.8); /* Glow effect */
+}
+
+/* Highlighted Disk */
+.disk.selected {
+  background-color: #ff6600; /* Brighter color for selected disk */
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.8); /* Glow effect */
+}
+
+/* Win Confirmation */
+.game-won {
+  background-color: #ccffcc; /* Light green background */
+  transition: background-color 0.5s ease-in-out;
+}
+
+.game-won .game-container {
+  background-color: #99ff99; /* Brighter green for the game container */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow effect */
+}
+
+.game-won .message {
+  color: #006600; /* Darker green for the message */
+  font-size: 2em; /* Larger font size for emphasis */
+  animation: bounce 1s ease-in-out; /* Bounce animation */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}

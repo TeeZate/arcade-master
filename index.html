@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade World</title>
+  <link rel="stylesheet" href="css/games.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Welcome to <span class="highlight">Arcade World</span>!</h1>
+      <p>Where fun and games come to life! 🎮✨</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="games">
+      <div class="game-card" onclick="navigateToGame('puzzle')">
+        <h2>🧩 Puzzle</h2>
+        <p>Solve the puzzle by arranging the pieces in the correct order.</p>
+      </div>
+      <div class="game-card" onclick="navigateToGame('tower-of-hanoi')">
+        <h2>🏰 Tower of Hanoi</h2>
+        <p>Move the disks from one tower to another following the rules.</p>
+      </div>
+      <div class="game-card" onclick="navigateToGame('match-the-tile')">
+        <h2>🔍 Match the Tile</h2>
+        <p>Find and match identical tiles in this memory game.</p>
+      </div>
+      <div class="game-card" onclick="navigateToGame('tic-tac-toe')">
+        <h2>❌⭕ Tic Tac Toe</h2>
+        <p>Play the classic game of Xs and Os against a friend or the computer.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        &copy; <span id="current-year"></span> Arcade World developed by Tinotenda Zhakata. All rights reserved. | 
+        <a href="https://github.com/TeeZate" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to display the current year
+    function displayCurrentYear() {
+      const year = new Date().getFullYear();
+      document.getElementById('current-year').textContent = year;
+    }
+
+    // Function to navigate to a game page
+    function navigateToGame(game) {
+      window.location.href = `${game}.html`;
+    }
+
+    // Call the function to display the current year
+    displayCurrentYear();
+  </script>
+</body>
+</html>

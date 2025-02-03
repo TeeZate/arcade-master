@@ -1,0 +1,176 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#reset-button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#reset-button:hover {
+    background: #ff4a3d;
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ff6f61, #ffcc5c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tile.flipped {
+    background: #fff;
+    transform: rotateY(180deg);
+}
+
+.tile.matched {
+    background: #88d8b0;
+    cursor: default;
+    transform: rotateY(180deg);
+    box-shadow: 0 5px 15px rgba(136, 216, 176, 0.5);
+}
+
+.tile img {
+    width: 80%;
+    height: 80%;
+    display: none;
+    border-radius: 5px;
+}
+
+.tile.flipped img {
+    display: block;
+}
+
+.leaderboard {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.leaderboard h2 {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+#leaderboard-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+#leaderboard-list li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Add this to styles.css */
+#start-button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#start-button:hover {
+    background: #45a049;
+}
+
+.tile.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Add this to styles.css */
+#leaderboard-list li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this to your existing CSS or create a new rule */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: #3399ff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0077cc;
+}

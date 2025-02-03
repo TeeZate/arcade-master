@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsoro Game</title>
+    <link rel="stylesheet" href="css/tsoro.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tsoro Game</h1>
+        <div class="board">
+            <!-- Player 2's rows -->
+            <div class="row player2">
+                <div class="hole" data-row="0" data-col="0">2</div>
+                <div class="hole" data-row="0" data-col="1">2</div>
+                <div class="hole" data-row="0" data-col="2">2</div>
+                <div class="hole" data-row="0" data-col="3">2</div>
+                <div class="hole" data-row="0" data-col="4">2</div>
+                <div class="hole" data-row="0" data-col="5">2</div>
+                <div class="hole" data-row="0" data-col="6">2</div>
+            </div>
+            <div class="row player2">
+                <div class="hole" data-row="1" data-col="0">2</div>
+                <div class="hole" data-row="1" data-col="1">2</div>
+                <div class="hole" data-row="1" data-col="2">2</div>
+                <div class="hole" data-row="1" data-col="3">2</div>
+                <div class="hole" data-row="1" data-col="4">2</div>
+                <div class="hole" data-row="1" data-col="5">2</div>
+                <div class="hole" data-row="1" data-col="6">2</div>
+            </div>
+            <!-- Player 1's rows -->
+            <div class="row player1">
+                <div class="hole" data-row="2" data-col="0">2</div>
+                <div class="hole" data-row="2" data-col="1">2</div>
+                <div class="hole" data-row="2" data-col="2">2</div>
+                <div class="hole" data-row="2" data-col="3">2</div>
+                <div class="hole" data-row="2" data-col="4">2</div>
+                <div class="hole" data-row="2" data-col="5">2</div>
+                <div class="hole" data-row="2" data-col="6">2</div>
+            </div>
+            <div class="row player1">
+                <div class="hole" data-row="3" data-col="0">2</div>
+                <div class="hole" data-row="3" data-col="1">2</div>
+                <div class="hole" data-row="3" data-col="2">2</div>
+                <div class="hole" data-row="3" data-col="3">2</div>
+                <div class="hole" data-row="3" data-col="4">2</div>
+                <div class="hole" data-row="3" data-col="5">2</div>
+                <div class="hole" data-row="3" data-col="6">2</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="reset-button">Reset Game</button>
+        </div>
+        <div class="status">
+            <p id="turn-indicator">Player 1's Turn</p>
+        </div>
+    </div>
+    <script src="js/tsoro.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Jigsaw Puzzle</title>
+  <link rel="stylesheet" href="css/puzzle.css">
+</head>
+<body>
+  <!-- Back to Game Button -->
+  <button class="back-button" onclick="window.location.href='index.html'">⬅ Back to Arcade</button>
+
+  <div class="container">
+    <h1>Interactive Jigsaw Puzzle</h1>
+    <div class="image-selector">
+      <h2>Choose an Image</h2>
+      <div class="thumbnails">
+        <img src="images/Winnie_The_Pooh.webp" alt="Image 1" class="thumbnail" data-image="images/Winnie_The_Pooh.webp">
+        <img src="images/scooby-doo.jpg" alt="Image 2" class="thumbnail" data-image="images/scooby-doo.jpg">
+        <img src="images/tom-and-jerry.jpg" alt="Image 3" class="thumbnail" data-image="images/tom-and-jerry.jpg">
+        <img src="images/popeye.jpg" alt="Image 2" class="thumbnail" data-image="images/popeye.jpg">
+        <img src="images/minie-and-mickie.jpg" alt="Image 3" class="thumbnail" data-image="images/minie-and-mickie.jpg">
+        <!-- Add more thumbnails as needed -->
+      </div>
+    </div>
+    <div class="level-selector">
+      <label for="level-select">Choose Level:</label>
+      <select id="level-select">
+        <option value="4">Level 1 (4x4)</option>
+        <option value="5">Level 2 (5x5)</option>
+        <option value="6">Level 3 (6x6)</option>
+        <option value="7">Level 4 (7x7)</option>
+        <option value="8">Level 5 (8x8)</option>
+      </select>
+      <button id="start-button">Start Game</button>
+    </div>
+    <div class="timer">
+      <span>Time: </span>
+      <span id="time">00:00</span>
+    </div>
+    <div class="puzzle-container">
+      <!-- Puzzle Board -->
+      <div class="puzzle-board" id="puzzle-board">
+        <!-- Drop zones will go here -->
+      </div>
+
+      <!-- Pieces Grid -->
+      <div class="pieces-grid" id="pieces-container">
+        <!-- Pieces will go here -->
+      </div>
+    </div>
+    <div class="completed-message" id="completed-message">
+      Congratulations! You've completed the puzzle!
+    </div>
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <div id="leaderboard-entries"></div>
+    </div>
+  </div>
+
+  <!-- Modal for entering name -->
+  <div id="name-modal" class="modal">
+    <div class="modal-content">
+      <h2>Congratulations!</h2>
+      <p>You've completed the puzzle in <span id="completion-time"></span>.</p>
+      <label for="player-name">Enter your name:</label>
+      <input type="text" id="player-name" placeholder="Your name">
+      <button id="submit-name">Submit</button>
+    </div>
+  </div>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="js/puzzle.js"></script>
+</body>
+</html>
